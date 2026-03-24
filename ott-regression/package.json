@@ -1,0 +1,22 @@
+{
+  "name": "ott-regression-tvbanywhere",
+  "version": "1.0.0",
+  "description": "Playwright regression test suite for TVBAnywhere+ OTT platform",
+  "scripts": {
+    "install:browsers": "npx playwright install chromium firefox",
+    "test": "npx playwright test",
+    "test:signin": "npx playwright test tests/01-signin.spec.js",
+    "test:playback": "npx playwright test tests/02-playback.spec.js",
+    "test:wishlist": "npx playwright test tests/03-wishlist.spec.js",
+    "test:continue-watching": "npx playwright test tests/04-continue-watching.spec.js",
+    "test:e2e": "npx playwright test tests/05-e2e-full-flow.spec.js",
+    "test:headed": "npx playwright test --headed",
+    "test:report": "npx playwright show-report reports/html-report",
+    "test:debug": "npx playwright test --debug",
+    "test:chrome": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0"
+  }
+}
